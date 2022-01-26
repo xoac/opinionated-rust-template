@@ -75,6 +75,18 @@ Here are some example commands:
 
 There is no cargo publish in CD. If you want one [here](https://github.com/rust-github/template/blob/db0d14be66dcd47e34b4946111b65b74c610cf4e/template/.github/workflows/cd.yml#L106-L121) is an example.
 
+## Know Issues:
+
+1. Double question for project name -- [issue in cargo-generate](https://github.com/cargo-generate/cargo-generate/issues/522)
+
+## TODO
+
+Pull requests are welcome.
+
+1. [ ] Support Gitlab.com Continuous Integration similar to github action.
+2. [ ] Automatically run `git remote add <GIT_URI>` in created directory
+3. [ ] Generate init `README.md` with `just readme-generate`
+
 ## License
 
 This template generate project with [BSL-1.0] license that is similar to [MIT] but require license and copyright notice only for source. This is great license for open-source project that can be widely used. If you want more information about why you should use this BSL-1.0 for FOSS projects see [this blog post](https://pdimov.github.io/blog/2020/09/06/why-use-the-boost-license/).
