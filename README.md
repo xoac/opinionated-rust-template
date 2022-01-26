@@ -1,6 +1,8 @@
-## Opinionated rust template
+# Opinionated rust template
 
-This is opinionated template to kick off new rust project with less than minute with best practices that I have found useful.
+![](./logo.svg)
+
+ This is opinionated template to kick off new rust project with less than minute with best practices that I have found useful.
 
 ## Usage
 
@@ -16,13 +18,14 @@ cargo install just cargo-deny cargo-generate cargo-readme
 
 Run and answer the questions:
 ```shell
-cargo generate --git github.com/xoac/opinionated-rust-template
+cargo generate --lib --git https://github.com/xoac/opinionated-rust-template
 ```
 
 Go to the project you created and list all available commands
 ```shell
 cd <PROJECT-NAME>
 just --list
+just readme-generate    # You probalbly want nice README.md file
 ```
 
 ### Improvements 
@@ -55,19 +58,20 @@ Here are some example commands:
 
 
 ### Continuous Integration/Delivery
-    Once a day:
-    1. audit
 
-    Push/PR:
-    1. cargo clippy (cargo check with additional checks)
-    2. cargo test
-    2. cargo checkfmt
-    3. cargo check dependencies (for updates)
-    4. cargo check licenses (with cargo deny). By default it deny know licenses that are considered [viral](https://en.wikipedia.org/wiki/Viral_license).
-    5. dry check of cargo publish
+**Once a day:**
+1. audit
 
-    Release tag:
-    1. build for linux/windows/macOS
+**On Push/PR:**
+1. cargo clippy (cargo check with additional checks)
+2. cargo test
+2. cargo checkfmt
+3. cargo check dependencies (for updates)
+4. cargo check licenses (with cargo deny). By default it deny know licenses that are considered [viral](https://en.wikipedia.org/wiki/Viral_license).
+5. dry check of cargo publish
+
+**Release tag:**
+1. build for linux/windows/macOS
 
 There is no cargo publish in CD. If you want one [here](https://github.com/rust-github/template/blob/db0d14be66dcd47e34b4946111b65b74c610cf4e/template/.github/workflows/cd.yml#L106-L121) is an example.
 
@@ -77,8 +81,8 @@ This template generate project with [BSL-1.0] license that is similar to [MIT] b
 
 ## Credits:
 
-    1. https://github.com/rust-github/template
-    2. https://github.com/xoac/crates-io-lib-template
+1. https://github.com/rust-github/template
+2. https://github.com/xoac/crates-io-lib-template
 
 
 [BSL-1.0]: https://choosealicense.com/licenses/bsl-1.0/
