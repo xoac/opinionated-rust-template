@@ -63,6 +63,23 @@ jobs:
           command: clippy
           args: --all-targets --all-features --workspace -- -D warnings
 
+  hack:
+    name: Hack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: "Install cargo hack "
+        uses: taiki-e/install-action@cargo-hack
+      - name: "cargo hack check each future"
+        run: cargo hack check --each-feature --no-dev-deps
+      - name: "cargo hack check future powerset"
+        run: cargo hack check --feature-powerset --no-dev-deps
+
   docs:
     name: Docs
     runs-on: ubuntu-latest
