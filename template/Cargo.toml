@@ -8,6 +8,7 @@ license = "BSL-1.0"
 
 repository = "{{repository}}"
 readme = "README.md"
+rust-version = "1.58" # MSRV (minimal supported rust version)
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 # This is a list of up to five keywords that describe this crate. Keywords

@@ -63,6 +63,28 @@ jobs:
           command: clippy
           args: --all-targets --all-features --workspace -- -D warnings
 
+  msrv:
+    name: MSRV
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Get minimal supported version from Cargo.toml
+        run: |
+          MSRV_RUST_VERSION=$(sed -En 's/rust-version[[:space:]]*=[[:space:]]*"([^"]+)"/\1/p' Cargo.toml | head -1)
+          echo "MSRV_RUST_VERSION=$MSRV_RUST_VERSION" >> $GITHUB_ENV
+      - name: Install MSRV Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: ${{ env.MSRV_RUST_VERSION }}
+          profile: minimal
+          override: true
+      - name: "run tests for minimal supported rust version"
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --all-features --workspace
+
   hack:
     name: Hack
     runs-on: ubuntu-latest

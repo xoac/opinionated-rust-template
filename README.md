@@ -63,12 +63,14 @@ Here are some example commands:
 1. audit
 
 **On Push/PR:**
-1. cargo clippy (cargo check with additional checks)
-2. cargo test
-2. cargo checkfmt
-3. cargo check dependencies (for updates)
-4. cargo check licenses (with cargo deny). By default it deny know licenses that are considered [viral](https://en.wikipedia.org/wiki/Viral_license).
-5. dry check of cargo publish
+1. **cargo clippy** (more powerful cargo checks)
+2. **cargo test**
+3. **cargo checkfmt**
+4. **cargo hack** (check if features works alone and combined)
+5. cargo check dependencies (for updates)
+6. cargo check licenses (with **cargo deny**). By default it deny know licenses that are considered [viral](https://en.wikipedia.org/wiki/Viral_license).
+7. dry run of cargo publish
+8. check if test pass on MSRV rust version
 
 **Release tag:**
 1. build for linux/windows/macOS
