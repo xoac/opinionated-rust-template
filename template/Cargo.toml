@@ -9,6 +9,7 @@ license = "BSL-1.0"
 repository = "{{repository}}"
 readme = "README.md"
 rust-version = "1.58" # MSRV (minimal supported rust version)
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 # This is a list of up to five keywords that describe this crate. Keywords
@@ -31,6 +32,9 @@ exclude = [
 # tokio = { version = "1", features = ["full"] }        # Async runtime
 # async-std = "1.10"                                    # Alternative async runtime
 #
+# thiserror = { version = "1" }                         # derive macro for the standard library’s std::error::Error trait
+# anyhow = { version = "1" }                            # easy idiomatic error handling in Rust applications
+#
 # log = "0.4"                                           # lightweight logging facade
 # pretty_env_logger = "0.4"                             # nice colored output for log levels
 # lazy_static = "1.0"                                   # macro for declaring lazily evaluated statics
@@ -41,3 +45,7 @@ exclude = [
 # rand = { version = "0.8" }                            # random number generation
 # bytes = { version = "1", features = ["serde"] }       # working with bytes
 # endian_codec = { version = "0.1" }                    # work with byte orders
+
+[dev-dependencies]
+# mockall = { version = "0.11" }                        # provides tools to create mock versions of almost any trait or struct
+# criterion = { version = "0.3" }                       #  measuring performance improvements or regressions

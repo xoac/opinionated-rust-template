@@ -58,3 +58,7 @@ This project use `deny.toml` to increase project security and legality. To check
 
 This project use `cargo readme` to avoid duplication between `README.md` and project documentation in `src/lib.rs` or `src/main.rs`.
 To update `README.md` call `cargo readme > README.md`. or find ready command with `just --list`. For installation and more details about cargo readme visit it [github page](https://github.com/livioribeiro/cargo-readme).
+
+### Useful resources
+
+    1. [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/)

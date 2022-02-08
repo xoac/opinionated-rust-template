@@ -88,6 +88,7 @@ Pull requests are welcome.
 1. [ ] Support Gitlab.com Continuous Integration similar to github action.
 2. [ ] Automatically run `git remote add <GIT_URI>` in created directory
 3. [ ] Generate init `README.md` with `just readme-generate`
+4. [ ] Check somehow if crate is using sem-ver correctly. (Detecting if Cargo.toml use version correctly).
 
 ## License
 
@@ -96,8 +97,7 @@ This template generate project with [BSL-1.0] license that is similar to [MIT] b
 ## Credits:
 
 1. https://github.com/rust-github/template
-2. https://github.com/xoac/crates-io-lib-template
-
+2. [Rust for Rustaceans](https://nostarch.com/rust-rustaceans)
 
 [BSL-1.0]: https://choosealicense.com/licenses/bsl-1.0/
 [MIT]: https://choosealicense.com/licenses/mit/
